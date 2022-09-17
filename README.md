@@ -1,13 +1,13 @@
 
-
+<div align="center" style="color:#8300FF">
 <h1 align="center" style="border-bottom: none">
-    <b style="color:#8300FF">
-        Icount API wrapper<br>
+    <b >
+        Icount API wrapper
     </b>
-    Python API Wrapper For Icount.co.il<br>
 </h1>
 
-<div align="center">
+# Unofficial wrapper for the [Icount.co.il](https://www.icount.co.il) JSON API
+
 <!-- [![Tests](https://github.com/kostagorod/icount-api-wrapper/workflows/Tests/badge.svg?branch=master)](https://github.com/kostagorod/icount-api-wrapper/actions?query=workflow%3ATests) -->
 <!-- [![codecov](https://codecov.io/gh/kostagorod/icount-api-wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/kostagorod/icount-api-wrapper) -->
 
@@ -18,5 +18,6 @@
 
 <!-- > “quote” -->
 </div>
-Unofficial wrapper for the [Icount.co.il](https://www.icount.co.il) JSON API
+
+
 
