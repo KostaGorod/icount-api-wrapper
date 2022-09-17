@@ -3,7 +3,7 @@ A python wrapper for the icount.co.il api
 https://www.icount.co.il/api-v3/
 """
 import requests
-from dotenv import dotenv_values
+
 
 def post(url, data):
     req = requests.post(url=url, params=data)
@@ -48,20 +48,8 @@ class iCountSession(object):
 
     def supplier_list(self):
         endpoint = "https://api.icount.co.il/api/v3.php/supplier/get_list"
-        res = post(
-            endpoint, {"sid": self.sid, "detail_level": 10}
-        )
+        res = post(endpoint, {"sid": self.sid, "detail_level": 10})
         return res.get("suppliers")
-    
+
     def create_doc(self):
         return
-
-
-# flake8: noqa
-if __name__ == "__main__":
-    icountConfig = dotenv_values(".env")
-    with iCountSession(
-        company=icountConfig.get("COMPANY"), username=icountConfig.get("USERNAME"), password=icountConfig.get("PASSWORD")
-    ) as session:
-        res = session.supplier_list()
-        print(res)
