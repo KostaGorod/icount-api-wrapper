@@ -53,5 +53,6 @@ class iCountSession(object):
 
     def create_doc(self, doc: dict):
         endpoint = "https://api.icount.co.il/api/v3.php/doc/create"
-        #res = post(endpoint, {doc.update({"sid": self.sid})})
-        return doc
+        res = post(endpoint, {"sid": self.sid} | doc)
+        return res
+
