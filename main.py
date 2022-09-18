@@ -1,11 +1,10 @@
 from dotenv import dotenv_values
 import json
-from icount import iCountSession
-
+from icountapi import iCountAPI
 # flake8: noqa
 if __name__ == "__main__":
     icountConfig: dict = dotenv_values(".env")
-    with iCountSession(
+    with iCountAPI(
         company=icountConfig.get("COMPANY"),
         username=icountConfig.get("USERNAME"),
         password=icountConfig.get("PASSWORD"),
@@ -15,9 +14,9 @@ if __name__ == "__main__":
 
         icountDoc = {
             "doctype": "invrec",
-            "client_id": "",
-            "email": "clientemail@example.com",
-            "client_name": "clientnameexample",
+            "client_id": "323455555",
+            "email": "",
+            "client_name": "clientnameexample2",
             "items": [
                 {"description": "descr", "unitprice_incvat": "100", "quantity": "1"},
                 {},

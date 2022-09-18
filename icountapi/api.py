@@ -17,7 +17,7 @@ def post(url, data=None, json=None, params=None):
     return resp_json
 
 
-class iCountSession(object):
+class iCountAPI(object):
     def __init__(self, company, username, password):
         self.sid = None
         self.login(company, username, password)
