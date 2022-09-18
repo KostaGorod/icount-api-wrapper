@@ -57,3 +57,16 @@ class iCountSession(object):
         res = post(endpoint, json={"sid": self.sid} | doc)
         return res
 
+    def get_doc(self, doctype, docnum: int):
+        endpoint = "https://api.icount.co.il/api/v3.php/doc/info"
+        res = post(
+            endpoint, params={"sid": self.sid, "doctype": doctype, "docnum": docnum}
+        )
+        return res
+
+    def cancel_doc(self, doctype, docnum: int):
+        endpoint = "https://api.icount.co.il/api/v3.php/doc/cancel"
+        res = post(
+            endpoint, params={"sid": self.sid, "doctype": doctype, "docnum": docnum}
+        )
+        return res
