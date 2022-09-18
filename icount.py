@@ -9,7 +9,6 @@ def post(url, data=None, json=None, params=None):
     req = requests.post(url=url, data=data, json=json, params=params)
     resp_json = req.json()
     if not resp_json.get("status", "False"):
-        print(resp_json)
         raise Exception(
             resp_json.get(
                 "error_description", "General Error, no error_description found"
